@@ -24,10 +24,24 @@ const ShowDetails = ({ show = {}, statusCode }) => {
           backgroundSize: "cover",
           height: `300px`,
         }}
-      ></div>
+      />
       <h1>{name}</h1>
       {parse(summary)}
       {_embedded.cast.length > 0 && <Cast cast={_embedded.cast} />}
+      <style jsx>
+        {`
+          .show-details {
+            color: #f7dfd4;
+          }
+          .show-details h1 {
+            text-align: center;
+            color: #e2b091;
+          }
+          :global(p) {
+            padding: 10px;
+          }
+        `}
+      </style>
     </div>
   );
 };

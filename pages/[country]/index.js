@@ -31,7 +31,7 @@ const Home = ({ shows, country, statusCode }) => {
           {`
             .tvshows-grid {
               display: grid;
-              grid-template-columns: 1fr 1fr;
+              grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
               text-align: center;
               gap:10px
               margin-bottom: 10px;

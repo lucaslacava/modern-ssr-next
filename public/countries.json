@@ -1,0 +1,26 @@
+[
+  {
+    "Code": "BR",
+    "Name": "Brazil"
+  },
+  {
+    "Code": "CA",
+    "Name": "Canada"
+  },
+  {
+    "Code": "CL",
+    "Name": "Chile"
+  },
+  {
+    "Code": "IE",
+    "Name": "Ireland"
+  },
+  {
+    "Code": "GB",
+    "Name": "United Kingdom"
+  },
+  {
+    "Code": "US",
+    "Name": "United States"
+  }
+]

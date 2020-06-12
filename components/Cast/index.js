@@ -14,10 +14,19 @@ const Cast = ({ cast }) => {
   };
   return (
     <div className="cast">
-      <h3>Cast</h3>
+      <h1>Cast</h1>
       <ul className="cast__list">{renderCast()}</ul>
       <style jsx>
         {`
+          .cast {
+            color: #f7dfd4;
+            text-align: center;
+          }
+          .cast h1 {
+            padding-top: 10px;
+            margin: 15px;
+            color: #e2b091;
+          }
           .cast__list {
             display: flex;
             flex-wrap: wrap;
