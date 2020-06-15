@@ -1,4 +1,5 @@
 import axios from "axios";
+import cookies from "nookies";
 import CustomError from "../_error";
 import Thumbnail from "../../components/Thumbnail/index";
 
@@ -46,7 +47,8 @@ const Home = ({ shows, country, statusCode }) => {
 
 Home.getInitialProps = async (context) => {
   try {
-    const country = context.query.country || "us";
+    const { defaultCountry } = cookies.get(context);
+    const country = context.query.country || defaultCountry || "br";
     const response = await axios.get(
       `https://api.tvmaze.com/schedule?country=${country}&date=2014-12-01`
     );

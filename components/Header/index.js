@@ -1,23 +1,20 @@
 import React from "react";
 import { useRouter } from "next/router";
 import countries from "../../public/countries.json";
-
-// const countries = [
-//   {
-//     code: "us",
-//     name: "United states",
-//   },
-//   {
-//     label: "br",
-//     name: "Brazil",
-//   },
-// ];
+import cookies from "nookies";
 
 const Header = () => {
   const router = useRouter();
   const [selectedCountry, setSelectedCountry] = React.useState(
     router.query.country
   );
+
+  React.useEffect(() => {
+    cookies.set(null, "defaultCountry", selectedCountry, {
+      maxAge: 30 * 24 * 60 * 60,
+      path: "/",
+    });
+  }, [selectedCountry]);
 
   const handleChange = (e) => {
     setSelectedCountry(e.target.value);
