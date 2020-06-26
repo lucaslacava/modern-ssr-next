@@ -61,7 +61,7 @@ const Header = () => {
             text-align: center;
             margin-bottom: 10px;
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
           }
           .header > :global(a) {
             color: white;
