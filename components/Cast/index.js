@@ -4,10 +4,16 @@ import Thumbnail from "../Thumbnail";
 const Cast = ({ cast }) => {
   const renderCast = () => {
     return cast.map((castItem, index) => {
-      const { image, name } = castItem.person;
+      const { image, name, id } = castItem.person;
       return (
         <li key={index}>
-          <Thumbnail imageUrl={image?.medium} caption={name} small />
+          <Thumbnail
+            imageUrl={image?.medium}
+            caption={name}
+            small
+            href={`/cast?personId=${id}`}
+            as={`/cast/${id}`}
+          />
         </li>
       );
     });
